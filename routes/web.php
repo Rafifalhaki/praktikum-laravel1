@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::resource('beranda', HomeController::class,);
 Route::resource('kelurahan', KelurahanController::class);
 Route::resource('unit-kerja', UnitKerjaController::class);
 Route::resource('paramedik', ParamedikController::class);

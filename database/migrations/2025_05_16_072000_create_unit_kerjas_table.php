@@ -4,19 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUnitKerjasTable extends Migration
+class CreateKelurahansTable extends Migration
 {
     public function up()
     {
-        Schema::create('unit_kerjas', function (Blueprint $table) {
+        Schema::create('kelurahans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->unsignedBigInteger('kec_id');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('unit_kerjas');
+        Schema::dropIfExists('kelurahans');
     }
 }
